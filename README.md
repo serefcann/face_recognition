@@ -1,6 +1,7 @@
 # Face Recognition with Pre-Trained Dataset
 
-This project demonstrates real-time face recognition using a webcam. The `test.py` script detects faces in the video feed and identifies individuals that have been pre-trained in the system. When a recognized face is detected, the corresponding name is displayed above the bounding box around the face.
+This project demonstrates real-time face recognition using a webcam. The `test.py` script detects faces in the video feed and identifies individuals that have been pre-trained in the system. When a recognized face is detected, the corresponding name is displayed above the box around the face.
+
 ![image](https://github.com/user-attachments/assets/6e00492d-b0d4-4ad4-b80c-8dc79bfa58fd)
 
 
