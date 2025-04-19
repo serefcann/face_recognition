@@ -39,7 +39,7 @@ while True:
         x,y,w,h = face['box']
         face_encoding = embedder.embeddings([rgb_frame[y:y+h,x:x+h]])[0]
 
-        name = "unkown"
+        #name = "unkown"
         min_dist = float("inf")
         for id,known_embedding in zip(Ids,known_embeddings):
             dist = np.linalg.norm(face_encoding - known_embedding)
@@ -48,7 +48,12 @@ while True:
                 name = id
 
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 0), 2)
+        
+        #if dist > 1.2:
+            #cv2.putText(frame, "unkown", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 0), 2)
+        #else:
         cv2.putText(frame, name, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 0), 2)
+
         
     cv2.imshow("Frame",frame)
 
